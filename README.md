@@ -15,4 +15,8 @@
       <img src="https://img.shields.io/badge/Twitter-16181C?style=for-the-badge&logo=twitter&logoColor=blue" alt="Twitter Badge"/>
     </a>
   </div>
+
+  <h1></h1>
+  
+  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AmyMialee&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 </div>
