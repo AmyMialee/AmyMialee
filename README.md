@@ -11,6 +11,7 @@
     <a href="https://modrinth.com/user/AmyMialee">
       <img src="https://img.shields.io/badge/Modrinth-16181C?style=for-the-badge&logo=modrinth&logoColor=17B85A" alt="Modrinth Badge"/>
     </a>
+    <br>
     <a href="https://twitter.com/amy_mialee">
       <img src="https://img.shields.io/badge/Twitter-16181C?style=for-the-badge&logo=twitter&logoColor=blue" alt="Twitter Badge"/>
     </a>
