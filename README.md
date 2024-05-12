@@ -14,6 +14,9 @@
     <a href="https://twitter.com/amy_mialee">
       <img src="https://img.shields.io/badge/Twitter-16181C?style=for-the-badge&logo=twitter&logoColor=blue" alt="Twitter Badge"/>
     </a>
+    <a href="https://discord.com/invite/P4dUsxv6An">
+      <img src="https://img.shields.io/badge/Discord-16181C?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord Badge"/>
+    </a>
     <a href="https://ko-fi.com/amymialee">
       <img src="https://img.shields.io/badge/Ko–Fi-16181C?style=for-the-badge&logo=ko-fi&logoColor=red" alt="Ko-Fi Badge"/>
     </a>
