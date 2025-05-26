@@ -22,9 +22,3 @@
       <img src="https://img.shields.io/badge/Ko–Fi-16181C?style=for-the-badge&logo=ko-fi&logoColor=red" alt="Ko-Fi Badge"/>
     </a>
   </div>
-
-  <h1></h1>
-  
-  ![AmyMialee's github stats](https://github-readme-stats.vercel.app/api?username=AmyMialee&count_private=true&show_icons=true&include_all_commits=true&theme=midnight-purple&hide_rank=true)  
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AmyMialee&theme=midnight-purple)](https://github.com/anuraghazra/github-readme-stats)
-</div>
