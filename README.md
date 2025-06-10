@@ -12,9 +12,13 @@
       <img src="https://img.shields.io/badge/Modrinth-16181C?style=for-the-badge&logo=modrinth&logoColor=17B85A" alt="Modrinth Badge"/>
     </a>
     <br>
+    <a href="https://bsky.app/profile/amymialee.xyz">
+      <img src="https://img.shields.io/badge/BSky-16181C?style=for-the-badge&logo=bluesky&logoColor=blue" alt="BlueSky Badge"/>
+    </a>
     <a href="https://twitter.com/amy_mialee">
       <img src="https://img.shields.io/badge/Twitter-16181C?style=for-the-badge&logo=x&logoColor=blue" alt="Twitter Badge"/>
     </a>
+    <br>
     <a href="https://discord.com/invite/P4dUsxv6An">
       <img src="https://img.shields.io/badge/Discord-16181C?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord Badge"/>
     </a>
