@@ -21,7 +21,7 @@
       <img src="https://img.shields.io/badge/Discord-16181C?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord Badge"/>
     </a>
     <a href="https://ko-fi.com/amymialee">
-      <img src="https://img.shields.io/badge/Ko–Fi-16181C?style=for-the-badge&logo=ko-fi&logoColor=red" alt="Ko-Fi Badge"/>
+      <img src="https://img.shields.io/badge/Patreon-16181C?style=for-the-badge&logo=patreon&logoColor=red" alt="Patreon Badge"/>
     </a>
   </div>
 </div>
