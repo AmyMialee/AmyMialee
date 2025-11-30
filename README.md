@@ -20,7 +20,7 @@
     <a href="https://discord.com/invite/P4dUsxv6An">
       <img src="https://img.shields.io/badge/Discord-16181C?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord Badge"/>
     </a>
-    <a href="https://ko-fi.com/amymialee">
+    <a href="https://www.patreon.com/cw/AmyMialee">
       <img src="https://img.shields.io/badge/Patreon-16181C?style=for-the-badge&logo=patreon&logoColor=red" alt="Patreon Badge"/>
     </a>
   </div>
