@@ -13,4 +13,5 @@
 </div>
 
 - She/Her
+- Games Development Graduate with First Class Honours
 - I work on various Minecraft Mod projects as well as Games
