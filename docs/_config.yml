@@ -1,1 +1,18 @@
-theme: jekyll-theme-minimal
+timezone: Europe/Dublin
+
+author:
+  name: AmyMialee
+  email: contact@amymialee.dev
+title: AmyMialee
+email: contact@amymialee.dev
+url: "https://amymialee.dev"
+twitter_username: amy_mialee
+github_username:  amymialee
+
+# Build settings
+remote_theme: "jekyll/minima@bf9ef98"
+minima:
+  hide_site_feed_link: true
+  skin: dark
+plugins:
+  - jekyll-feed
