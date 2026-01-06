@@ -74,7 +74,7 @@ layout: blank
             justify-content:center;
             font-size:1.4rem;
         }
-        .social-icon:hover{transform:translateY(-3px);}
+        .social-icon:hover{transform:translateY(-3px)}
         .link-container{
             display:flex;
             flex-direction:column;
@@ -119,7 +119,7 @@ layout: blank
         body{
             color:#d2d2d2;
             background-color: #121212;
-            &::before{background:url("https://github.com/AmyMialee/AmyMialee/blob/main/docs/checkerdark.png?raw=true")repeat;}
+            &::before{background:url("checkerdark.png")repeat}
             .theme-toggle{background:rgba(255,255,255,0.2); color:rgb(234,198,73)}
             .theme-toggle:hover{background:rgba(255,255,255,0.2)}
             .profile-card{
@@ -156,7 +156,7 @@ layout: blank
         body.light{
             color:#0b0020;
             background-color: #9073C7;
-            &::before{background:url("https://github.com/AmyMialee/AmyMialee/blob/main/docs/checker.png?raw=true")repeat;}
+            &::before{background:url("checker.png")repeat}
             .theme-toggle{background:rgba(61,61,61,0.2); color:rgb(57,57,57)}
             .theme-toggle:hover{background:rgba(255,255,255,0.2)}
             .profile-card{
@@ -283,7 +283,7 @@ layout: blank
             themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         };
         themeToggle.addEventListener('click', swap);
-        if (localStorage.getItem('theme') === 'light'){swap();}
+        if (localStorage.getItem('theme') === 'light'){swap()}
         document.getElementById('currentYear').textContent = new Date().getFullYear().toString();
     </script>
 </body>
