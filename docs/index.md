@@ -119,7 +119,7 @@ layout: blank
         body{
             color:#d2d2d2;
             background-color: #121212;
-            &::before{background:url("https://github.com/AmyMialee/AmyMialee/blob/main/docs/checkerdark.png")repeat;}
+            &::before{background:url("https://github.com/AmyMialee/AmyMialee/blob/main/docs/checkerdark.png?raw=true")repeat;}
             .theme-toggle{background:rgba(255,255,255,0.2); color:rgb(234,198,73)}
             .theme-toggle:hover{background:rgba(255,255,255,0.2)}
             .profile-card{
@@ -156,7 +156,7 @@ layout: blank
         body.light{
             color:#0b0020;
             background-color: #9073C7;
-            &::before{background:url("https://github.com/AmyMialee/AmyMialee/blob/main/docs/checker.png")repeat;}
+            &::before{background:url("https://github.com/AmyMialee/AmyMialee/blob/main/docs/checker.png?raw=true")repeat;}
             .theme-toggle{background:rgba(61,61,61,0.2); color:rgb(57,57,57)}
             .theme-toggle:hover{background:rgba(255,255,255,0.2)}
             .profile-card{
