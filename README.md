@@ -1,5 +1,5 @@
 <div id="header" align="center">
-    <img src="https://cdn.discordapp.com/icons/793141001765912636/a_0adffc2feeb72fe621aa450c1b9ca374.webp" width="160" alt="Profile Picture"/>
+    <img src="https://avatars.githubusercontent.com/u/10999535?v=4" width="160" alt="Profile Picture"/>
 </div>
 
 ## I'm AmyMialee!
