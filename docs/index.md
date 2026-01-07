@@ -275,15 +275,27 @@ layout: blank
         </div>
     </div>
     <script>
+        let shiftPressed = false;
+        document.addEventListener('keydown', (e) => {if (e.key === 'Shift') shiftPressed = true;});
+        document.addEventListener('keyup', (e) => {if (e.key === 'Shift') shiftPressed = false;});
+        window.addEventListener('blur', () => {shiftPressed = false;});
         const themeToggle = document.getElementById('themeToggle');
         const swap = () => {
             document.body.classList.toggle('light');
-            const isLight = document.body.classList.contains('light');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            themeToggle.innerHTML = document.body.classList.contains('light') ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         };
-        themeToggle.addEventListener('click', swap);
-        if (localStorage.getItem('theme') === 'light'){swap()}
+        themeToggle.addEventListener('click', () => {
+            swap();
+            if (shiftPressed) {
+                localStorage.remove('theme');
+            } else {
+                localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+            }
+        });
+        if (localStorage.getItem('theme') === 'light' || (localStorage.getItem('theme') === null && window.matchMedia('(prefers-color-scheme: light)').matches)){swap()}
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+            if (document.body.classList.contains('light') !== event.matches){swap()}
+        });
         document.getElementById('currentYear').textContent = new Date().getFullYear().toString();
     </script>
 </body>
