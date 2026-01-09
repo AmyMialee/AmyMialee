@@ -1,13 +1,15 @@
 timezone: Europe/Dublin
 
+# Site-wide settings
 author:
   name: AmyMialee
   email: contact@amymialee.dev
-title: AmyMialee
+title: AmyMialee's Hideout
 email: contact@amymialee.dev
 url: "https://amymialee.dev"
-twitter_username: amy_mialee
-github_username:  amymialee
+description: >
+  AmyMialee's website and portfolio website.
+  This website contains information about Amy's Projects, Game Development, Minecraft Mods and others.
 
 # Build settings
 remote_theme: "jekyll/minima@bf9ef98"
@@ -15,4 +17,5 @@ minima:
   hide_site_feed_link: true
   skin: dark
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

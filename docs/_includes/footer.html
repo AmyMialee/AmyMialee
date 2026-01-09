@@ -1,19 +1,7 @@
-<style>
-  .footer{
-    text-align:center;
-    margin-top:30px;
-    opacity:0.7;
-    font-size:0.9rem
-  }
-</style>
-<footer class="site-footer">
-  <div class="wrapper">
-    <ul class="contact-list">
-      <li class="p-name">{{ site.author.name | escape }}</li>
-      <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-    </ul>
+<footer>
+  <div class="container">
     <div class="footer">
-      <p>© <span id="currentYear"></span> AmyMialee. All rights reserved.</p>
+      <p>© <span id="currentYear"></span> {{ site.author.name | escape }}. All rights reserved.</p>
     </div>
     <script>
       document.getElementById('currentYear').textContent = new Date().getFullYear().toString();
