@@ -1,0 +1,34 @@
+---
+layout: post
+---
+{% assign content_parts = content | split: "<!--split-->" %}
+<div>
+    <div class="wrapper" style="max-width: 850px">
+        {{ content_parts[0] }}
+    </div>
+    <div class="team-profile-grid">
+        {% for entry in page.contributors %}
+        {% assign person = site.data.profiledata[entry.id] %}
+        <div class="profile-card" style="--profile-colour: #{{ person.colour }}">
+            {%- if person.avatar -%}
+            <img src="{{ person.avatar }}" alt="{{ person.name }} icon" class="profile-card-img">
+            {%- endif -%}
+            <h2 class="profile-card-name">{{ person.name }}</h2>
+            <h3 class="profile-card-bio">{{ entry.role }}</h3>
+            <h3 class="profile-card-subbio">{{ entry.description }}</h3>
+            <div class="profile-card-links">
+                {% for link in person.links %}
+                {% assign social_key = link[0] %}
+                {% assign social_info = site.data.socialdata[social_key] %}
+                <a href="{{ link[1] }}" class="profile-card-link-icon" target="_blank" title="{{ social_info.title }}" style="--brand-color: #{{ social_info.colour }}">
+                    <span class="profile-card-link-mask" style="--icon-url: url('{{ social_info.icon }}')"></span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="wrapper" style="max-width: 850px">
+        {{ content_parts[1] }}
+    </div>
+</div>

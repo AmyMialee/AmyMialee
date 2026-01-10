@@ -1,10 +1,6 @@
 <footer>
-  <div class="container">
-    <div class="footer">
-      <p>© <span id="currentYear"></span> {{ site.author.name | escape }}. All rights reserved.</p>
-    </div>
-    <script>
-      document.getElementById('currentYear').textContent = new Date().getFullYear().toString();
-    </script>
+  <div class="separator" style="margin: 0 auto 0"></div>
+  <div class="footer">
+    <p>© {{ site.time | date: '%Y' }} {{ site.author.name | escape }}. All rights reserved.</p>
   </div>
 </footer>

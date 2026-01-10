@@ -1,18 +1,65 @@
-<header class="site-header">
-
+<header>
+  <label for="sidebar-trigger" class="sidebar-button" id="homeButton" title="Toggle Sidebar" style="cursor: pointer"><i class="fas fa-bars"></i></label>
+  <label class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Theme"><i class="fas fa-sun"></i></label>
   <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
-    {%- assign page_titles = site.pages | map: 'title' | compact %}
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-
-    <nav class="site-nav">
-      <input type="checkbox" id="nav-trigger" />
-      <label for="nav-trigger">
-        <span class="menu-icon"></span>
-      </label>
-
-      {% include nav-items.html paths = page_paths %}
-    </nav>
+    <input type="checkbox" id="sidebar-trigger" class="sidebar-trigger" hidden/>
+    <div class="site-sidebar">
+      <div class="sidebar-content">
+        <h1 class="sidebar-title"><a href="{{ site.url }}">AmyMialee</a></h1>
+        <div class="separator" style="margin: 30px auto 20px"></div>
+        <h3 class="sidebar-header">About</h3>
+        <p>{{ site.description }}</p>
+        <div class="separator" style="margin: 10px auto 20px"></div>
+        <h3 class="sidebar-header">Quick Links</h3>
+        <div class="sidebar-link-entry-list">
+          {% assign person = site.data.profiledata.amymialee %}
+          {% for link in person.links %}
+          {% assign social_key = link[0] %}
+          {% assign social_info = site.data.socialdata[social_key] %}
+          <a href="{{ link[1] }}" data-social-key="{{ social_key }}" class="sidebar-link-entry-item" target="_blank" title="{{ social_info.title }}" style="--brand-color: #{{ social_info.colour }}">
+            <div class="sidebar-link-entry-icon"><span class="sidebar-link-entry-mask" style="--icon-url: url('{{ social_info.icon }}')"></span></div>
+            <div><div class="sidebar-link-entry-title">{{ social_info.title }}</div></div>
+          </a>
+          {% endfor %}
+        </div>
+        <div class="sidebar-footer">
+          <div class="separator" style="margin: 20px auto 20px"></div>
+          <div class="ticker-wrap">
+            <div class="ticker-move">
+              {% assign random_items = site.data.ticker.items | sample: 8 %}
+              {% for entry in random_items %}
+                <span class="ticker-item">{{ entry }}</span>
+              {% endfor %}
+              {% for entry in random_items %}
+                <span class="ticker-item">{{ entry }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label for="sidebar-trigger" class="sidebar-overlay"></label>
   </div>
 </header>
+
+<script>
+  let shiftPressed = false;
+  document.addEventListener('keydown', (e) => {if (e.key === 'Shift') shiftPressed = true;});
+  document.addEventListener('keyup', (e) => {if (e.key === 'Shift') shiftPressed = false;});
+  window.addEventListener('blur', () => {shiftPressed = false;});
+  const themeToggle = document.getElementById('themeToggle');
+  const swap = () => {
+    document.body.classList.toggle('light');
+    themeToggle.innerHTML = document.body.classList.contains('light') ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+  };
+  themeToggle.addEventListener('click', () => {
+    swap();
+    if (shiftPressed) {
+      localStorage.removeItem('theme');
+    } else {
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    }
+  });
+  if (localStorage.getItem('theme') === 'light' || (localStorage.getItem('theme') === null && window.matchMedia('(prefers-color-scheme: light)').matches)){swap()}
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {if (document.body.classList.contains('light') !== event.matches){swap()}});
+</script>

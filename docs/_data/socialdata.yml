@@ -1,0 +1,65 @@
+website:
+  title: Website
+  description: Visit my website
+  colour: 6e5494
+  icon: https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/solid/globe.svg
+
+amymialee:
+  title: Homepage
+  description:
+  colour: 6e5494
+  icon: https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/solid/globe.svg
+
+patreon:
+  title: Patreon
+  description: Support my work and access exclusive content
+  colour: f96854
+  icon: 'https://cdn.simpleicons.org/patreon/white'
+
+discord:
+  title: Discord
+  description: Join my Discord Server
+  colour: 5865f2
+  icon: 'https://cdn.simpleicons.org/discord/white'
+
+twitch:
+  title: Twitch
+  description: Follow me on Twitch
+  colour: 8956fb
+  icon: 'https://cdn.simpleicons.org/twitch/white'
+
+youtube:
+  title: YouTube
+  description: Subscribe to my YouTube channel
+  colour: ff0000
+  icon: 'https://cdn.simpleicons.org/youtube/white'
+
+modrinth:
+  title: Modrinth
+  description: Download my mods on Modrinth
+  colour: 1bd96a
+  icon: 'https://cdn.simpleicons.org/modrinth/white'
+
+curseforge:
+  title: CurseForge
+  description: Download my mods on CurseForge
+  colour: f58220
+  icon: 'https://cdn.simpleicons.org/curseforge/white'
+
+bsky:
+  title: BlueSky
+  description: Follow me on BlueSky
+  colour: 1185fe
+  icon: 'https://cdn.simpleicons.org/bluesky/white'
+
+twitter:
+  title: Twitter
+  description: Follow me on Twitter
+  colour: 26a7de
+  icon: 'https://cdn.simpleicons.org/x/white'
+
+github:
+  title: GitHub
+  description: Follow me on GitHub
+  colour: 6e5494
+  icon: 'https://cdn.simpleicons.org/github/white'

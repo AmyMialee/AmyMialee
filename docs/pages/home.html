@@ -1,0 +1,32 @@
+---
+permalink: /home.html
+layout: base
+title: "Browse Posts"
+---
+
+{% assign all_docs = "" | split: "," %}
+{% for collection in site.collections %}
+  {% assign all_docs = all_docs | concat: collection.docs %}
+{% endfor %}
+{% assign sorted_docs = all_docs | sort: "date" | reverse %}
+
+<style>
+  .post-header {border: 0}
+</style>
+<header class="post-header">
+  <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+  <div class="separator" style="margin: 20px auto -20px"></div>
+</header>
+<div class="home wrapper" style="max-width: 800px;">
+  <ul class="post-list">
+    {% for post in sorted_docs %}
+    <li style="margin-bottom: 8px;">
+      <strong class="post-list-group">[{{ post.collection | capitalize }}]</strong>
+      <span class="post-list-date date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <h3 class=""><a class="post-link post-list-title" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a></h3>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

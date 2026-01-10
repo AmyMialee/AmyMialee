@@ -1,0 +1,44 @@
+---
+permalink: /sitemap.html
+layout: base
+title: Sitemap
+---
+
+{% assign all_pages = site.pages | concat: site.documents %}
+{% assign sorted_docs = all_pages | sort: "title" %}
+
+<style>
+  .post-header {border: 0}
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    list-style: none;
+    margin-left: 0;
+  }
+  @media (min-width: 1000px) {
+    .post-list { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+<header class="post-header">
+  <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+  <div class="separator" style="margin: 20px auto -20px"></div>
+</header>
+<div class="home wrapper" style="max-width: 800px;">
+  <ul class="post-list">
+    {% for item in sorted_docs %}
+    {% assign ext = item.path | split: "." | last %}
+    {% if ext == "html" or ext == "md" %}
+    <li style="margin-bottom: 8px; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+      <strong class="post-list-group">
+        [{% if item.collection %}{{ item.collection | capitalize }}{% else %}Page{% endif %}]
+      </strong>
+      <h3 style="display: inline;"><a class="post-link post-list-title" href="{{ item.url | relative_url }}">
+        {% if item.title %}{{ item.title | escape }}{% else %}{{ item.name }}{% endif %}
+      </a></h3>
+      <small style="display: block; color: #666;">Path: {{ item.path }}</small>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

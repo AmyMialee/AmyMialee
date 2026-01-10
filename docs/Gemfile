@@ -14,3 +14,4 @@ gem "github-pages", "~> 232", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.1"
 end
+gem 'rubocop', group: 'development', require: false

@@ -1,0 +1,12 @@
+---
+layout: base
+---
+<style>
+  .post-header {border: 0}
+</style>
+<header class="post-header">
+  <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+  <div class="separator" style="margin: 20px auto -20px"></div>
+</header>
+<div itemprop="articleBody">{{ content }}</div>
+<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

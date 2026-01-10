@@ -1,0 +1,40 @@
+---
+layout: blank
+---
+<style>
+    .profile-card {max-width: 400px; margin: 0 auto 16px}
+    @keyframes fadeInUp{from{transform:translateY(-10px)}to{transform:translateX(0)}}
+    body{align-items:center}
+</style>
+<body>
+<div class="wrapper" style="animation:fadeInUp 1s ease forwards">
+    {% assign profile = page.profile %}
+    {% assign person = site.data.profiledata[profile] %}
+    <div class="profile-card" style="--profile-colour: #{{ person.colour }}">
+        <img src="{{ person.avatar }}" alt="{{ person.name }} icon" class="profile-card-img">
+        <h2 class="profile-card-name">{{ person.name }}</h2>
+        <h3 class="profile-card-bio">{{ person.bio }}</h3>
+        <div class="profile-card-links">
+            {% for link in person.links %}
+            {% assign social_key = link[0] %}
+            {% assign social_info = site.data.socialdata[social_key] %}
+            {% if link[0] == "amymialee" %}{% continue %}{% endif %}
+            <a href="{{ link[1] }}" data-social-key="{{ social_key }}" class="profile-card-link-icon" target="_blank" title="{{ social_info.title }}" style="--brand-color: #{{ social_info.colour }}">
+                <span class="profile-card-link-mask" style="--icon-url: url('{{ social_info.icon }}')"></span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="link-entry-list">
+        {% for link in person.links %}
+        {% assign social_key = link[0] %}
+        {% assign social_info = site.data.socialdata[social_key] %}
+        {% if link[0] == "amymialee" %}{% continue %}{% endif %}
+        <a href="{{ link[1] }}" data-social-key="{{ social_key }}" class="link-entry-item" target="_blank" title="{{ social_info.title }}" style="--brand-color: #{{ social_info.colour }}">
+            <div class="link-entry-icon"><span class="link-entry-mask" style="--icon-url: url('{{ social_info.icon }}')"></span></div>
+            <div><div class="link-entry-title">{{ social_info.title }}</div><div class="link-entry-description">{{ social_info.description }}</div></div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+</body>
