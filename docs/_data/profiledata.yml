@@ -17,8 +17,15 @@ amymialee:
 
 backupcup:
   name: BackupCup
+  colour: dc001e
+  avatar: https://backupcup.dev/assets/images/image01.jpg?v=6ab41ef4
   links:
     website: https://backupcup.dev/
+    bsky: https://bsky.app/profile/backupcup.dev
+    discord: https://discord.com/invite/srVrjdZ2Dh
+    github: https://github.com/BackupCup
+    modrinth: https://modrinth.com/user/BackupCup
+    curseforge: https://curseforge.com/members/backupcup/projects
 
 absolutelyaya:
   name: absolutelyaya

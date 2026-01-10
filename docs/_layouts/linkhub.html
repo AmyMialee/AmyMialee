@@ -5,12 +5,31 @@ layout: blank
     .profile-card {max-width: 400px; margin: 0 auto 16px}
     @keyframes fadeInUp{from{transform:translateY(-10px)}to{transform:translateX(0)}}
     body{align-items:center}
+
+    .splash {
+        display: inline-block;
+        text-align: center;
+        color: #FFFF55;
+        text-shadow: 2px 2px #3F3F15;
+        font-weight: 600;
+        font-size: 1.2rem;
+        position: absolute; /* Positioning needs work imo especially for multiline splashes */
+        left: 5%;
+        top: 5%;
+        animation: splashPulse 0.3s infinite alternate ease-out;
+        pointer-events: none;
+        z-index: 5;
+    }
+    @keyframes splashPulse {
+        from {transform: rotate(-20deg) scale(0.9);}
+        to {transform: rotate(-20deg) scale(1.1);}
+    }
 </style>
 <body>
 <div class="wrapper" style="animation:fadeInUp 1s ease forwards">
-    {% assign profile = page.profile %}
-    {% assign person = site.data.profiledata[profile] %}
+    {% assign person = site.data.profiledata[page.profile] %}
     <div class="profile-card" style="--profile-colour: #{{ person.colour }}">
+        <div class="splash" id="splash"></div>
         <img src="{{ person.avatar }}" alt="{{ person.name }} icon" class="profile-card-img">
         <h2 class="profile-card-name">{{ person.name }}</h2>
         <h3 class="profile-card-bio">{{ person.bio }}</h3>
@@ -38,3 +57,13 @@ layout: blank
     </div>
 </div>
 </body>
+<script>
+    const allSplashes = {{ site.data.splashes[page.profile] | jsonify }};
+    function populateTicker() {
+        const container = document.getElementById('splash');
+        if (!container) return;
+        const shuffled = [...allSplashes].sort(() => 0.5 - Math.random());
+        container.innerHTML = shuffled.slice(0, 1).map(item => `<span class="ticker-item">${item}</span>`).join('');
+    }
+    populateTicker();
+</script>
