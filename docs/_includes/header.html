@@ -25,14 +25,8 @@
         <div class="sidebar-footer">
           <div class="separator" style="margin: 20px auto 20px"></div>
           <div class="ticker-wrap">
-            <div class="ticker-move">
-              {% assign random_items = site.data.ticker.items | sample: 8 %}
-              {% for entry in random_items %}
-                <span class="ticker-item">{{ entry }}</span>
-              {% endfor %}
-              {% for entry in random_items %}
-                <span class="ticker-item">{{ entry }}</span>
-              {% endfor %}
+            <div class="ticker-move" id="ticker-container">
+
             </div>
           </div>
         </div>
@@ -43,6 +37,16 @@
 </header>
 
 <script>
+  const allTickers = {{ site.data.ticker.items | jsonify }};
+  function populateTicker(count) {
+    const container = document.getElementById('ticker-container');
+    if (!container) return;
+    const shuffled = [...allTickers].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, count);
+    container.innerHTML = [...selected, ...selected].map(item => `<span class="ticker-item">${item}</span>`).join('');
+  }
+  populateTicker(8);
+
   let shiftPressed = false;
   document.addEventListener('keydown', (e) => {if (e.key === 'Shift') shiftPressed = true;});
   document.addEventListener('keyup', (e) => {if (e.key === 'Shift') shiftPressed = false;});
