@@ -417,6 +417,7 @@ body.light { /* Light Theme */
   margin-left: 8px;
   margin-right: 8px;
   flex-shrink: 0;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.65));
 }
 .supporter-icon.tier1 {
   width: 32px;
@@ -441,8 +442,6 @@ body.light { /* Light Theme */
 }
 .supporter-tier-title {
   margin: 0.5rem auto 1rem;
-  color: var(--tier-color) !important;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -471,37 +470,36 @@ body.light { /* Light Theme */
 .supporter-entry {
   padding: 0.5rem 1.25rem;
   border-radius: 50px;
-  color: var(--tier-color);
 }
 .supporter-entry.tier1 {
-  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 85%);
+  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 75%);
   font-size: 1rem;
-  font-weight: 400;
-  background: color-mix(in srgb, var(--tier-color), transparent 95%);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--tier-color), transparent 85%);
 }
 .supporter-entry:hover.tier1 {
-  box-shadow: 0 0 15px color-mix(in srgb, var(--tier-color), transparent 80%);
-  background: color-mix(in srgb, var(--tier-color), transparent 80%);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--tier-color), transparent 70%);
+  background: color-mix(in srgb, var(--tier-color), transparent 70%);
 }
 .supporter-entry.tier2 {
-  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 80%);
+  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 70%);
   font-size: 1.1rem;
-  font-weight: 400;
-  background: color-mix(in srgb, var(--tier-color), transparent 90%);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--tier-color), transparent 80%);
 }
 .supporter-entry:hover.tier2 {
-  box-shadow: 0 0 15px color-mix(in srgb, var(--tier-color), transparent 75%);
-  background: color-mix(in srgb, var(--tier-color), transparent 75%);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--tier-color), transparent 65%);
+  background: color-mix(in srgb, var(--tier-color), transparent 65%);
 }
 .supporter-entry.tier3 {
-  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 60%);
+  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 50%);
   font-size: 1.5rem;
-  font-weight: 600;
-  background: color-mix(in srgb, var(--tier-color), transparent 90%);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--tier-color), transparent 80%);
 }
 .supporter-entry:hover.tier3 {
-  box-shadow: 0 0 25px color-mix(in srgb, var(--tier-color), transparent 60%);
-  background: color-mix(in srgb, var(--tier-color), transparent 60%);
+  box-shadow: 0 0 25px color-mix(in srgb, var(--tier-color), transparent 50%);
+  background: color-mix(in srgb, var(--tier-color), transparent 50%);
 }
 body { /* Dark Theme */
   .supporter-box{
@@ -519,6 +517,12 @@ body { /* Dark Theme */
   .supporter-box-description {
     color: #a6a6a6;
   }
+  .supporter-tier-title {
+    color: var(--tier-color);
+  }
+  .supporter-entry {
+    color: var(--tier-color);
+  }
 }
 body.light { /* Light Theme */
   .supporter-box{
@@ -535,6 +539,15 @@ body.light { /* Light Theme */
   }
   .supporter-box-description {
     color: #393939;
+  }
+  .supporter-tier-title {
+    color: color-mix(in srgb, var(--tier-color), black 65%);
+  }
+  .supporter-entry {
+    color: color-mix(in srgb, var(--tier-color), black 45%);
+    background: color-mix(in srgb, var(--tier-color), transparent 75%);
+    border: 1px solid color-mix(in srgb, color-mix(in srgb, var(--tier-color), black 65%), transparent 55%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
 
