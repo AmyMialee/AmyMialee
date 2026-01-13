@@ -9,3 +9,5 @@ Super Supporter:
 Supporter:
   color: "9AA4AE"
   icon: "/assets/crown_silver_icon.png"
+  class: "tier1"
+  hidden: true

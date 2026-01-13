@@ -39,17 +39,19 @@ layout: post
             Patreon Supporters
         </div>
         <div class="supporter-box-description">Thanks to all of my supporters for helping to make my projects possible.</div>
-        {% for tier in page.supporters %}
-        {% assign tier_name = tier[0] %}
-        {% assign tier_data = site.data.tierdata[tier_name] %}
-        {% if tier_data %}
+        {% for tier_entry in site.data.tierdata %}
+        {% assign tier_name = tier_entry[0] %}
+        {% assign tier_data = tier_entry[1] %}
+        {% if tier_data.hidden %}{% continue %}{% endif %}
+        {% assign tier_supporters = page.supporters[tier_name] %}
+        {% if tier_supporters %}
         <div class="supporter-tier-title {{ tier_data.class }}" style="--tier-color: #{{ tier_data.color }}">
             <img src="{{ tier_data.icon | relative_url }}" class="supporter-icon {{ tier_data.class }}" alt="{{ tier_name }} icon">
-            {{ tier_name }}s
+            <span style="text-align: center; line-height: 1.1; display: block;">{{ tier_name }}s</span>
             <img src="{{ tier_data.icon | relative_url }}" class="supporter-icon {{ tier_data.class }}" alt="{{ tier_name }} icon">
         </div>
         <div class="supporter-list">
-            {% for name in tier[1] %}
+            {% for name in tier_supporters %}
             <div class="supporter-entry {{ tier_data.class }}" style="--tier-color: #{{ tier_data.color }}">{{ name }}</div>
             {% endfor %}
         </div>
