@@ -1,0 +1,46 @@
+<header>
+    <label for="sidebar-trigger" class="sidebar-button" id="homeButton" title="Toggle Sidebar" style="cursor: pointer"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+        <input type="checkbox" id="sidebar-trigger" class="sidebar-trigger" hidden/>
+        <div class="site-sidebar">
+            <div class="sidebar-content">
+                <h1 class="sidebar-title"><a href="{{ site.url }}">AmyMialee</a></h1>
+                <div class="separator" style="margin: 30px auto 20px"></div>
+                <h3 class="sidebar-header">About</h3>
+                <p>{{ site.description }}</p>
+                <div class="separator" style="margin: 10px auto 20px"></div>
+                <h3 class="sidebar-header">Quick Links</h3>
+                <div class="sidebar-link-entry-list">
+                    {% assign person = site.data.profiledata.amymialee %}
+                    {% for link in person.links %}
+                    {% assign social_key = link[0] %}
+                    {% assign social_info = site.data.socialdata[social_key] %}
+                    <a href="{{ link[1] }}" data-social-key="{{ social_key }}" class="sidebar-link-entry-item" target="_blank" title="{{ social_info.title }}" style="--brand-color: #{{ social_info.colour }}">
+                        <div class="sidebar-link-entry-icon"><span class="sidebar-link-entry-mask" style="--icon-url: url('{{ social_info.icon }}')"></span></div>
+                        <div><div class="sidebar-link-entry-title">{{ social_info.title }}</div></div>
+                    </a>
+                    {% endfor %}
+                </div>
+                <div class="sidebar-footer">
+                    <div class="separator" style="margin: 20px auto 20px"></div>
+                    <div class="ticker-wrap">
+                        <div class="ticker-move" id="ticker-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="sidebar-trigger" class="sidebar-overlay"></label>
+    </div>
+</header>
+
+<script>
+    const allTickers = {{ site.data.ticker.items | jsonify }};
+    function populateTicker(count) {
+        const container = document.getElementById('ticker-container');
+        if (!container) return;
+        const shuffled = [...allTickers].sort(() => 0.5 - Math.random());
+        const selected = shuffled.slice(0, count);
+        container.innerHTML = [...selected, ...selected].map(item => `<span class="ticker-item">${item}</span>`).join('');
+    }
+    populateTicker(8);
+</script>

@@ -1,6 +1,7 @@
 ---
 layout: post
 ---
+
 {% assign content_parts = content | split: "<!--split-->" %}
 <div>
     <div class="wrapper" style="max-width: 850px">
@@ -30,5 +31,32 @@ layout: post
     </div>
     <div class="wrapper" style="max-width: 850px">
         {{ content_parts[1] }}
+    </div>
+    <div class="supporter-box">
+        {% assign patreon = site.data.socialdata.patreon %}
+        <div class="supporter-box-title">
+            <span class="supporter-logo" style="--icon-url: url('{{ patreon.icon }}'); --supporter-color: #{{ patreon.colour }};"></span>
+            Patreon Supporters
+        </div>
+        <div class="supporter-box-description">Thanks to all of my supporters for helping to make my projects possible.</div>
+        {% for tier in page.supporters %}
+        {% assign tier_name = tier[0] %}
+        {% assign tier_data = site.data.tierdata[tier_name] %}
+        {% if tier_data %}
+        <div class="supporter-tier-title {{ tier_data.class }}" style="--tier-color: #{{ tier_data.color }}">
+            <img src="{{ tier_data.icon | relative_url }}" class="supporter-icon {{ tier_data.class }}" alt="{{ tier_name }} icon">
+            {{ tier_name }}s
+            <img src="{{ tier_data.icon | relative_url }}" class="supporter-icon {{ tier_data.class }}" alt="{{ tier_name }} icon">
+        </div>
+        <div class="supporter-list">
+            {% for name in tier[1] %}
+            <div class="supporter-entry {{ tier_data.class }}" style="--tier-color: #{{ tier_data.color }}">{{ name }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="wrapper" style="max-width: 850px">
+        {{ content_parts[2] }}
     </div>
 </div>

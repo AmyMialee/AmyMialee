@@ -1,0 +1,11 @@
+Hyper Supporter:
+  color: "B588B1"
+  icon: "/assets/crown_amethyst_icon.png"
+  class: "tier3"
+Super Supporter:
+  color: "FFBF49"
+  icon: "/assets/crown_gold_icon.png"
+  class: "tier2"
+Supporter:
+  color: "9AA4AE"
+  icon: "/assets/crown_silver_icon.png"

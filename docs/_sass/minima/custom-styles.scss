@@ -208,6 +208,26 @@ body.light { /* Light Theme */
 .ticker-item {padding-right: 2rem;}
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+/* Splash */
+.splash {
+  display: inline-block;
+  text-align: center;
+  color: #FFFF55;
+  text-shadow: 2px 2px #3F3F15;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: absolute; /* Positioning needs work imo especially for multiline splashes */
+  left: 5%;
+  top: 5%;
+  animation: splashPulse 0.3s infinite alternate ease-out;
+  pointer-events: none;
+  z-index: 5;
+}
+@keyframes splashPulse {
+  from {transform: rotate(-20deg) scale(0.9);}
+  to {transform: rotate(-20deg) scale(1.1);}
+}
+
 /* Profile Card */
 .profile-card {
   flex: 1 1 280px;
@@ -359,7 +379,136 @@ body.light { /* Light Theme */
   justify-content: center;
   gap: 2rem;
   margin: 16px auto 0;
-  max-width: 940px; // 900px + gaps
+}
+
+/* Supporter Box */
+.supporter-box {
+  max-width: 1100px;
+  padding: 2rem;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  margin: 2rem auto;
+}
+.supporter-logo {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: var(--supporter-color);
+  mask: var(--icon-url) no-repeat center;
+  width: 36px;
+  height: 36px;
+  mask-size: contain;
+}
+.supporter-box-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto 0.5rem
+}
+.supporter-box-description {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 auto 0.75rem;
+}
+.supporter-icon {
+  image-rendering: pixelated;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.supporter-icon.tier2 {
+  width: 36px;
+  height: 36px;
+  image-rendering: pixelated;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.supporter-icon.tier3 {
+  width: 52px;
+  height: 52px;
+  image-rendering: pixelated;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.supporter-tier-title {
+  margin: 0.5rem auto 0.5rem;
+  color: var(--tier-color) !important;
+}
+.supporter-tier-title.tier2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.supporter-tier-title.tier3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+}
+.supporter-list {
+  max-width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.supporter-entry {
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  color: var(--tier-color);
+}
+.supporter-entry.tier2 {
+  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 80%);
+  font-size: 1.1rem;
+  font-weight: 400;
+  background: color-mix(in srgb, var(--tier-color), transparent 90%);
+}
+.supporter-entry:hover.tier2 {
+  box-shadow: 0 0 15px color-mix(in srgb, var(--tier-color), transparent 75%);
+  background: color-mix(in srgb, var(--tier-color), transparent 75%);
+}
+.supporter-entry.tier3 {
+  border: 1px solid color-mix(in srgb, var(--tier-color), transparent 60%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--tier-color), transparent 90%);
+}
+.supporter-entry:hover.tier3 {
+  box-shadow: 0 0 25px color-mix(in srgb, var(--tier-color), transparent 60%);
+  background: color-mix(in srgb, var(--tier-color), transparent 60%);
+}
+body { /* Dark Theme */
+  .supporter-box{
+    color:#d2d2d2 !important;
+    background:rgba(60, 60, 60, 0.15);
+    border:1px solid rgba(255, 255, 255, 0.1);
+    border-left:2px solid #f96854;
+    border-right:2px solid #f96854;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.48);
+  }
+  .supporter-box:hover{
+    border-color:#f96854;
+    background:rgba(60,60,60,0.5)
+  }
+  .supporter-box-description {
+    color: #a6a6a6;
+  }
+}
+body.light { /* Light Theme */
+  .supporter-box{
+    color:#0b0020 !important;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(0,0,0,0.1);
+    border-left:2px solid #f96854;
+    border-right:2px solid #f96854;
+    box-shadow:0 10px 30px rgba(0,0,0,0.24);
+  }
+  .supporter-box:hover{
+    border-color:#f96854;
+    background:rgba(255,255,255,0.25)
+  }
+  .supporter-box-description {
+    color: #393939;
+  }
 }
 
 /* Link Entry List */
@@ -368,6 +517,7 @@ body.light { /* Light Theme */
   flex-direction:column;
   gap:16px;
   a:hover{text-decoration:none !important}
+  max-width: 450px;
 }
 .link-entry-item{
   border-radius:16px;
