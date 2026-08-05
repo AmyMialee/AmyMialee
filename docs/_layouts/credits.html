@@ -7,6 +7,7 @@ layout: post
     <div class="wrapper" style="max-width: 850px">
         {{ content_parts[0] }}
     </div>
+    {% if page.contributors %}
     <div class="team-profile-grid">
         {% for entry in page.contributors %}
         {% assign person = site.data.profiledata[entry.id] %}
@@ -29,9 +30,11 @@ layout: post
         </div>
         {% endfor %}
     </div>
+    {% endif %}
     <div class="wrapper" style="max-width: 850px">
         {{ content_parts[1] }}
     </div>
+    {% if page.supporters %}
     <div class="supporter-box">
         {% assign patreon = site.data.socialdata.patreon %}
         <div class="supporter-box-title">
@@ -58,6 +61,7 @@ layout: post
         {% endif %}
         {% endfor %}
     </div>
+    {% endif %}
     <div class="wrapper" style="max-width: 850px">
         {{ content_parts[2] }}
     </div>
