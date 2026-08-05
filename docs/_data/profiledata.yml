@@ -1,18 +1,18 @@
 amymialee:
   name: AmyMialee
   colour: 6e5494
-  bio: Games Development Graduate and Modder
-  avatar: https://avatars.githubusercontent.com/u/10999535?v=4?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80
+  bio: Game Developer and Modder
+  avatar: https://avatars.githubusercontent.com/u/10999535
   links:
     amymialee: https://amymialee.dev/
     patreon: https://www.patreon.com/cw/AmyMialee
     discord: https://discord.gg/aEghXGbm3J
-    twitch: https://www.twitch.tv/AmyMialee
     youtube: https://www.youtube.com/@AmyMialee
+    twitch: https://www.twitch.tv/AmyMialee
     modrinth: https://modrinth.com/user/AmyMialee
     curseforge: https://curseforge.com/members/amymialee/projects
     bsky: https://bsky.app/profile/amymialee.dev
-    twitter: https://twitter.com/amy_mialee
+    twitter: https://x.com/amy_mialee
     github: https://github.com/AmyMialee
 
 backupcup:
@@ -28,29 +28,49 @@ backupcup:
     curseforge: https://curseforge.com/members/backupcup/projects
 
 absolutelyaya:
-  name: absolutelyaya
+  name: Absolutelyaya
+  avatar: https://avatars.githubusercontent.com/u/70072204
   links:
     website: https://absolutelyaya.cool/
 
 slimeslabs:
   name: SlimeSlabs
+  avatar: https://cdn.bsky.app/img/avatar/plain/did:plc:3xl5azpyojsuctofk5zhrqwy/bafkreiamjv35hfh3rz5lraaiwtwph2tshe6kvsctowjsv2vnimdixv22fu
   links:
     website: https://sites.google.com/view/loki-porfolio/home
 
 tellioarid:
   name: tellioarid
+  avatar: https://cdn.bsky.app/img/avatar/plain/did:plc:shn7waswdjazbp27ptwwjjjl/bafkreih7422nzocmbnenoqew4odbju5xx4sk2vfdvp6es5k53uciavdpem
   links:
     bsky: https://bsky.app/profile/did:plc:shn7waswdjazbp27ptwwjjjl
 
 luxintrus:
-  name: luxintrus
+  name: Luxintrus
   avatar: https://yt3.googleusercontent.com/eUxnoM54k6UtdG3ch88UgZfsbyd_rkWOUXicF6QOhwOKaDOwtCGI9BV3aHBF6mnk82DG5CR9NA=s160-c-k-c0x00ffffff-no-rj
   links:
-    website: https://luxintrus.com/
     youtube: https://www.youtube.com/@luxintrus
+    patreon: https://www.patreon.com/cw/Luxintrus
+    discord: https://discord.com/invite/rattiestgang
+    website: https://luxintrus.com/
+    bsky: https://bsky.app/profile/luxintrus.com
 
 winsweep:
-  name: winsweep
+  name: Winsweep
   avatar: https://yt3.googleusercontent.com/Nh0jD-73NeNb8Febf5bv0Uj2kyST3oeL7jfKyeMpOEx08JE802S9pke5XXt_Xj31royolfIG=s160-c-k-c0x00ffffff-no-rj
   links:
     youtube: https://www.youtube.com/@WinSweep
+    patreon: https://www.patreon.com/cw/Winsweep
+    discord: https://discord.com/invite/rattiestgang
+    twitter: https://x.com/Winsweep_
+    twitch: https://www.twitch.tv/winsweep
+    bsky: https://bsky.app/profile/winsweep.bsky.social
+
+faminemc:
+  name: FamineMC
+  avatar: https://yt3.googleusercontent.com/lhsY9nz2s7aE7hRsjSmxrXnoySmKKLqNTHtdL3CHGtocQEuWy16Q6VNaBLwVHTayAuhjpWImFA=s160-c-k-c0x00ffffff-no-rj
+  links:
+    youtube: https://www.youtube.com/@FamineMC
+    twitch: https://www.twitch.tv/faminemc
+    bsky: https://bsky.app/profile/faminemc.bsky.social
+    discord: https://discord.com/invite/mqh6sdCFad
