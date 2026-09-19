@@ -208,26 +208,6 @@ body.light { /* Light Theme */
 .ticker-item {padding-right: 2rem;}
 @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-/* Splash */
-.splash {
-  display: inline-block;
-  text-align: center;
-  color: #FFFF55;
-  text-shadow: 2px 2px #3F3F15;
-  font-weight: 600;
-  font-size: 1.2rem;
-  position: absolute; /* Positioning needs work imo especially for multiline splashes */
-  left: 5%;
-  top: 5%;
-  animation: splashPulse 0.3s infinite alternate ease-out;
-  pointer-events: none;
-  z-index: 5;
-}
-@keyframes splashPulse {
-  from {transform: rotate(-20deg) scale(0.9);}
-  to {transform: rotate(-20deg) scale(1.1);}
-}
-
 /* Profile Card */
 .profile-card {
   flex: 1 1 280px;

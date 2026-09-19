@@ -45,14 +45,4 @@
         {%- include sub-footer.html -%}
         {%- endif -%}
     </body>
-    <script>
-        const allSplashes = {{ site.data.splashes[page.profile] | jsonify }};
-        function populateTicker() {
-            const container = document.getElementById('splash');
-            if (!container) return;
-            const shuffled = [...allSplashes].sort(() => 0.5 - Math.random());
-            container.innerHTML = shuffled.slice(0, 1).map(item => `${item}`).join('');
-        }
-        populateTicker();
-    </script>
 </html>
