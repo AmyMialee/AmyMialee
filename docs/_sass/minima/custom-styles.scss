@@ -403,9 +403,10 @@ body.light { /* Light Theme */
   mask-size: contain;
 }
 .supporter-box-title {
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  margin: 0 auto 0.5rem
+  margin: 0 auto 0.5rem;
+  vertical-align: middle;
 }
 .supporter-box-description {
   font-size: 1rem;
@@ -457,7 +458,7 @@ body.light { /* Light Theme */
 }
 .supporter-tier-title.tier3 {
   font-size: 1.85rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 .supporter-list {
   max-width: 950px;
@@ -569,8 +570,8 @@ body.light { /* Light Theme */
 .link-entry-item:hover{
   transform:translateX(12px);
   .link-entry-mask{
-    width:42px;
-    height:42px;
+    width:64px;
+    height:64px;
   }
 }
 .link-entry-icon{
@@ -713,8 +714,9 @@ body.light {
 }
 
 /* General */
-*{margin:0; padding:0; box-sizing:border-box; transition: all 0.5s ease}
-body{font-family:'Inter', sans-serif; line-height:1.6}
+*{margin:0; padding:0; box-sizing:border-box; transition: all 0.5s ease-out}
+@font-face{font-family:'Inter', sans-serif; font-display: swap;}
+body{line-height:1.6}
 @media(max-width:500px){body{padding:15px}}
 .center{text-align: center}
 .h-1{
