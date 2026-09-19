@@ -63,3 +63,9 @@ github:
   description: Follow me on GitHub
   colour: 6e5494
   icon: 'https://cdn.simpleicons.org/github/white'
+
+itch:
+  title: Itch.io
+  description: See my projects on Itch.io
+  colour: fa5c5c
+  icon: 'https://cdn.simpleicons.org/itchdotio/white'
